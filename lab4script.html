@@ -10,6 +10,24 @@
             window.document.getElementById('second').style.fontSize="40px";
         }
     </script>
+
+    <Script>
+        function larger(){
+    alert(document.getElementById('first').style.fontSize);
+     var
+    currentSize=document.getElementById('first').style.fontSize;
+    alert(currentSize);
+    var lengthOfString=currentSize.length;
+    alert(lengthOfString);
+    var numericSize=currentSize.substring(0,lengthOfString-2);
+    alert(numericSize);
+    var newSize=numericSize*2;
+    alert(newSize);
+    var newSize=newSize+"px";
+    alert('The new size will be '+newSize);
+    document.getElementById('first').style.fontSize=newSize;
+    }
+    </Script>
 </head>
 <body>
 
@@ -37,5 +55,12 @@
         document.body.style.fontStyle="italic";
         document.body.style.padding="100px"
     </script>
+
+    <p id="first" style="font-family: verdana;">This is the paragraph for 
+    Exercise 7 and <span onmouseover="HelloFun();" style="color:blue;">you 
+    should hover here.</span></p>
+
+    <button onclick="larger()">Larger</button>
+<p id="first" style="font-size: 16px;">Exercise 11</p>
 </body>
 </html>
