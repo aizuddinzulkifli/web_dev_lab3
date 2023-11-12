@@ -6,7 +6,8 @@
 
     <script>
         function HelloFun(){
-            alert('Have a nice day');
+            window.document.getElementById('first').style.fontSize="5px"
+            window.document.getElementById('second').style.fontSize="40px";
         }
     </script>
 </head>
@@ -20,10 +21,10 @@
         alert("Hello new scripter");
     </script>
 
-    <p>Try hovering over the red words
-        <span onmouseover="alert('caught you');" style="color:red">
-        just here</span> to see what happens.
-    </p>
+    <p id="first">This is the first paragraph and <span
+    onmouseover="HelloFun();" style="color:blue;">you should hover 
+    here.</span>
+    <p id="second">This is the second paragraph.</p>
 
     <p>Try hovering over the green words
         <span onmouseover="alert('caught you');" style="color:green">
