@@ -1,74 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>My scripted page</title>
-
-    <script>
-        function HelloFun(){
-            window.document.getElementById('first').style.fontSize="5px"
-            window.document.getElementById('second').style.fontSize="40px";
-        }
-    </script>
-    <script>
-        function larger(){
-    alert(document.getElementById('first').style.fontSize);
-     var
-    currentSize=document.getElementById('first').style.fontSize;
-    alert(currentSize);
-    var lengthOfString=currentSize.length;
-    alert(lengthOfString);
-    var numericSize=currentSize.substring(0,lengthOfString-2);
-    alert(numericSize);
-    var newSize=numericSize*2;
-    alert(newSize);
-    var newSize=newSize+"px";
-    alert('The new size will be '+newSize);
-    document.getElementById('first').style.fontSize=newSize;
-    }
-    </script>
-    <script>
-        function changebgcolour(colour){
-            document.body.style.backgroundColor=colour;
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content</title>
 </head>
 <body>
-
-    <!-- Main Content-->
-    <h1>Welcome to JavaScript</h1>
-    <p>I am learning to write a script on my page</p>
-
-    <script>
-        alert("Hello new scripter");
-    </script>
-
-    <p id="first">This is the first paragraph and <span
-    onmouseover="HelloFun();" style="color:blue;">you should hover 
-    here.</span>
-    <p id="second">This is the second paragraph.</p>
-
-    <p>Try hovering over the green words
-        <span onmouseover="alert('caught you');" style="color:green">
-        just here</span> to see what happens.
-    </p>
+    <div id="myElement">
+        <p id="welcomeText">Welcome to my website!</p>
+    </div>
 
     <script>
-        document.body.style.fontFamily="Verdana";
-        document.body.style.fontSize="30px";
-        document.body.style.fontStyle="italic";
-        document.body.style.padding="100px"
+        document.getElementById("welcomeText").innerHTML = "Hello there!";
     </script>
-
-    <p id="first" style="font-family: verdana;">This is the paragraph for 
-    Exercise 7 and <span onmouseover="HelloFun();" style="color:blue;">you 
-    should hover here.</span></p>
-
-    <button onclick="larger()">Larger</button>
-    <p id="first" style="font-size: 16px;">Exercise 11</p>
-
-    <p onclick="changebgcolour('green');">Green</p>
-    <p onclick="changebgcolour('blue');">Blue</p>
-    <p onclick="changebgcolour('red');">Red</p>
 </body>
 </html>
