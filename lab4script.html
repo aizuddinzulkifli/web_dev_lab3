@@ -10,8 +10,7 @@
             window.document.getElementById('second').style.fontSize="40px";
         }
     </script>
-
-    <Script>
+    <script>
         function larger(){
     alert(document.getElementById('first').style.fontSize);
      var
@@ -27,7 +26,12 @@
     alert('The new size will be '+newSize);
     document.getElementById('first').style.fontSize=newSize;
     }
-    </Script>
+    </script>
+    <script>
+        function changebgcolour(colour){
+            document.body.style.backgroundColor=colour;
+        }
+    </script>
 </head>
 <body>
 
@@ -61,6 +65,10 @@
     should hover here.</span></p>
 
     <button onclick="larger()">Larger</button>
-<p id="first" style="font-size: 16px;">Exercise 11</p>
+    <p id="first" style="font-size: 16px;">Exercise 11</p>
+
+    <p onclick="changebgcolour('green');">Green</p>
+    <p onclick="changebgcolour('blue');">Blue</p>
+    <p onclick="changebgcolour('red');">Red</p>
 </body>
 </html>
